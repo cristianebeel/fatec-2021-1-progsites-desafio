@@ -1,78 +1,58 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        fatec-2021-1-progsites-desafio-2
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div>
+    <div class="flex flex-col my-12 space-y-2 md:space-y-4">
+      <h1 class="text-center font-bold pb-4 text-lg sm:text-2xl xl:text-3xl 2xl:text-5xl">Escolha uma página</h1>
+      <p><nuxt-link to="/photogrid">PhotoGrid</nuxt-link></p>
+      <p><nuxt-link to="/login">Formulário de login</nuxt-link></p>
+      <p><nuxt-link to="/endereco">Formulário de endereço</nuxt-link></p>
+      <p><nuxt-link to="/api">API</nuxt-link></p>
     </div>
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style scoped>
+p{
+  padding: 1rem 2rem;
+  border: 1px solid #333;
+  border-radius: 1rem;
+  background-color: #bee6d6;
   text-align: center;
+  font-size: 1rem;
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+p:hover, p:focus{
+  cursor: pointer;
+  background-color: #c1bee6;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+@media(min-width: 640px){
+  p{
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+  }
 }
 
-.links {
-  padding-top: 15px;
+@media(min-width: 768px){
+  p{
+    font-size: 1.3rem;
+  }
+}
+
+@media(min-width: 1024px){
+  p{
+    font-size: 1.5rem;
+  }
+}
+
+@media(min-width: 1280px){
+  p{
+    font-size: 1.7rem;
+  }
+}
+
+@media(min-width: 1536px){
+  p{
+    font-size: 2rem;
+  }
 }
 </style>
